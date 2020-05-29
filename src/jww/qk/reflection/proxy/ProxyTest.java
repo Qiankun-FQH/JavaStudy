@@ -91,5 +91,7 @@ public class ProxyTest {
         ClothFactory proxyInstance1 = (ClothFactory) proxyInstance;
         proxyInstance1.produceCloth();
 
+
+
     }
 }

@@ -2,23 +2,9 @@ package jww.qk.team.service;
 
 /**
  * @author Qiankun
- * @date 2020/2/15 0015 -14:20
+ * @date 2020/2/24 0024 -10:34
+ * @title
  **/
-public class Status {
-    private final String NAME;
-    private Status(String name){
-        this.NAME = name;
-    }
-    public static final Status FREE = new Status("FREE");
-    public static final Status BUSY = new Status("BUSY");
-    public static final Status VOCATION = new Status("VOCATION");
-
-    public String getNAME() {
-        return NAME;
-    }
-
-    @Override
-    public String toString() {
-        return NAME;
-    }
+public enum Status {
+    FREE,BUSY,VOCATION;
 }

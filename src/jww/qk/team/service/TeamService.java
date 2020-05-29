@@ -41,10 +41,16 @@ public class TeamService {
         }
 
         Programmer p = (Programmer) e;
-        if(p.getStatus().getNAME().equals("BUSY")){
-            throw new TeamException("該員工已在其他開發團隊中");
-        }else if(p.getStatus().getNAME().equals("VOCATION")){
-            throw new TeamException("該員工已在其他開發團隊中");
+//        if(p.getStatus().getNAME().equals("BUSY")){
+//            throw new TeamException("該員工已在其他開發團隊中");
+//        }else if(p.getStatus().getNAME().equals("VOCATION")){
+//            throw new TeamException("該員工已在其他開發團隊中");
+//        }
+        switch (p.getStatus()){
+            case BUSY:
+                throw new TeamException("該員工已在其他開發團隊中");
+            case VOCATION:
+                throw new TeamException("該員工已在其他開發團隊中");
         }
 
         int numOfArch = 0,numOfDes = 0, numOfPro = 0;
